@@ -44,3 +44,5 @@ function displayProducts(products) {
   });
 }
 document.addEventListener('DOMContentLoaded', fetchProducts);
+
+// Task 4 is at lines 14-17
