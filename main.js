@@ -9,7 +9,12 @@ function fetchProducts() {
       }
       return response.json();
     })
-    .then(data => displayProducts(data)); // Call to display products on successful fetch
+    .then(data => displayProducts(data)) // Call to display products on successful fetch
+    .catch(error => {
+      // Task 4: Handle Errors Gracefully
+      console.error('Error fetching products:', error);
+      document.getElementById('product-container').innerHTML = '<p>Failed to load products. Please try again later.</p>'; // Display friendly error message
+    });
 }
 
 // Task 3: Display Product Details Dynamically
